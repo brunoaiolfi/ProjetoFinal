@@ -6,4 +6,4 @@ def menu():
     print('3 - Realizar Venda.')
     print('4 - Relatórios.')
     print('5 – Sair.')
-    print('') 
+    print('')
