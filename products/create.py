@@ -1,7 +1,7 @@
 def createProduct(productList):
     tempProductList = list(productList)
 
-    produto = {
+    product = {
         "id" : len(productList), # Campo unico, por ser o tamanho da lista consequentemente já é o index
         "type": "",
         "name": "",
@@ -9,38 +9,32 @@ def createProduct(productList):
         "quant": 0
     }
 
-    while produto["name"] == "":
-        produto["name"] = input('Nome do produto: ')
+    while product["name"] == "":
+        product["name"] = input('Nome do produto: ')
 
-        if (produto["name"] == ""):
+        if (product["name"] == ""):
             print("Nome inválido")
     
-    while produto["type"] == "":
-        produto["type"] = input('Tipo de produto (Pão, Bolo, Salgado, Bebida, etc.): ')
+    while product["type"] == "":
+        product["type"] = input('Tipo de produto (Pão, Bolo, Salgado, Bebida, etc.): ')
 
-        if (produto["type"] == ""):
-            print("Produto invalido")
+        if (product["type"] == ""):
+            print("Tipo inválido")
 
-    while produto["price"] <= 0 or produto["price"] == "":
-        produto["price"] = int(input('Preço de venda: '))
+    while product["price"] <= 0 or product["price"] == "":
+        product["price"] = int(input('Preço de venda: '))
 
-        if (produto["price"] <= 0):
-            print("Nome inválido")
+        if (product["price"] <= 0):
+            print("Preço inválido")
     
-    while produto["quant"] <= 0 or produto["quant"] == "":
-        produto["quant"] = int(input('Estoque inicial: '))
+    while product["quant"] <= 0 or product["quant"] == "":
+        product["quant"] = int(input('Estoque inicial: '))
 
-        if (produto["quant"] <= 0):
-            print("Produto invalido")
+        if (product["quant"] <= 0):
+            print("Quantidade inválida")
     
 
-    tempProductList.append(produto)
+    tempProductList.append(product)
+    print("Cadastro realizado com sucesso!!!")
 
     return tempProductList 
-
-
-
-   
-
-
-
