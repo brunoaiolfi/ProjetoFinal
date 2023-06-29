@@ -19,6 +19,7 @@ def generateReportMenu(productList, saleList):
             optionSelectedIsValid = True
         else:
             generateReportsSales(saleList)
+            
             optionSelectedIsValid = True
     
             
